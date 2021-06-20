@@ -29,13 +29,9 @@ class DefaultProductRepository(
         productDao.insert(ProductItem)
     }
 
-    override suspend fun insertProductList(ProductList: List<ProductEntity>) {
-        TODO("Not yet implemented")
-    }
+    override suspend fun insertProductList(ProductList: List<ProductEntity>) {}
 
-    override suspend fun updateProductItem(ProductItem: ProductEntity) {
-        TODO("Not yet implemented")
-    }
+    override suspend fun updateProductItem(ProductItem: ProductEntity) {}
 
     override suspend fun getProductItem(itemId: Long): ProductEntity? = withContext(ioDispatcher) {
         val response = productApi.getProduct(itemId)
@@ -50,9 +46,6 @@ class DefaultProductRepository(
         productDao.deleteAll()
     }
 
-    override suspend fun deleteProductItem(id: Long) {
-        TODO("Not yet implemented")
-    }
-
+    override suspend fun deleteProductItem(id: Long) {}
 
 }
